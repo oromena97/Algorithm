@@ -1,0 +1,19 @@
+length_counter = 0
+word_counter = 1
+vowel_counter = 0
+
+input_sentence = read_input()
+
+for character in input_sentence:
+    length_counter += 1
+    
+    if character == ' ':
+        word_counter += 1
+    else if character in 'aeiouAEIOU':
+        vowel_counter += 1
+    else if character == '.':
+        break
+
+write("Length of sentence:", length_counter)
+write("Number of words:", word_counter)
+write("Number of vowels:", vowel_counter)
